@@ -11,15 +11,15 @@ def test_compliting_profile(py: Pylenium):
     py.get('[name="password"]').type('Qq!12345')
     py.get('[class="auth0-label-submit"]').click()
     time.sleep(5)
-    # py.scroll_to(0,200)
+    # py.scroll_to(0,200) #The scroll_to doesn't scroll the page, used Javascript
     py.execute_script("window.scrollTo(0, document.body.scrollHeight);")
     time.sleep(3)
     py.get('[class="btn btn-sumo-primary v-btn v-btn--has-bg theme--light elevation-0 v-size--default"]').scroll_into_view().click() #scroll_into??
     time.sleep(3)
     py.execute_script("window.scrollTo(0, document.body.scrollHeight);")
     # time.sleep(3)
-    # py.get('[id="fileUploadForm"]').click() #Adding the file
-    # py.get('[class="d-flex flex-row flex-nowrap justify-center align-center"]').click()
+    # py.get('[id="fileUploadForm"]').click() #I had a problem with adding the file, need more time to learn this
+    # py.get('[class="d-flex flex-row flex-nowrap justify-center align-center"]').click() #Also couldn't to chose the color
     time.sleep(3)
     py.get('[id="capabilities"]').type('Roofing, Gutters')
     py.get('[id="capabilities2"]').type('Residental')
@@ -37,3 +37,4 @@ def test_compliting_profile(py: Pylenium):
     py.get('[class="btn-sumo-primary mt-2 v-btn v-btn--has-bg theme--light elevation-0 v-size--default"]').click()
     py.get('[class="btn-sumo-primary float-right v-btn v-btn--has-bg theme--light elevation-0 v-size--default"]').click()
     time.sleep(3)
+    
