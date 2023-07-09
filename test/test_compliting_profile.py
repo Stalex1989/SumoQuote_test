@@ -37,8 +37,3 @@ def test_compliting_profile(py: Pylenium):
     py.get('[class="btn-sumo-primary mt-2 v-btn v-btn--has-bg theme--light elevation-0 v-size--default"]').click()
     py.get('[class="btn-sumo-primary float-right v-btn v-btn--has-bg theme--light elevation-0 v-size--default"]').click()
     time.sleep(3)
-
-    
-    
-
-
