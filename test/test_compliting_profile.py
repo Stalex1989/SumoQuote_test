@@ -14,7 +14,7 @@ def test_compliting_profile(py: Pylenium):
     # py.scroll_to(0,200) #The scroll_to doesn't scroll the page, used Javascript
     py.execute_script("window.scrollTo(0, document.body.scrollHeight);")
     time.sleep(3)
-    py.get('[class="btn btn-sumo-primary v-btn v-btn--has-bg theme--light elevation-0 v-size--default"]').scroll_into_view().click() #scroll_into??
+    py.get('[class="btn btn-sumo-primary v-btn v-btn--has-bg theme--light elevation-0 v-size--default"]').scroll_into_view().click() #scroll_into, can't get how it works.
     time.sleep(3)
     py.execute_script("window.scrollTo(0, document.body.scrollHeight);")
     # time.sleep(3)
@@ -25,7 +25,7 @@ def test_compliting_profile(py: Pylenium):
     py.get('[id="capabilities2"]').type('Residental')
     py.get('[class="btn-sumo-primary mt-8 v-btn v-btn--has-bg theme--light elevation-0 v-size--default"]').click()
     # time.sleep(3)
-    # py.get('[src="/images/templates/Template2.png"]').click() #can't select
+    # py.get('[src="/images/templates/Template2.png"]').click() #can't select, the selector can not be clicked.
     time.sleep(5)
     py.get('[class="btn-sumo-primary float-right v-btn v-btn--has-bg theme--light elevation-0 v-size--default"]').click()
     time.sleep(3)
